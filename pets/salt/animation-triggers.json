@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "petId": "salt",
+  "defaultState": "idle",
+  "description": "莎露朵（魔法盐巴）的 Codex v2 事件映射。素材来自 B 站 BV1Te896yE9d，作者 @0x4682B4；禁止商用、禁止投喂 AI、二创请告知。",
+  "playback": {
+    "mode": "once",
+    "restoreState": "previous-or-idle",
+    "interruptLowerPriority": false,
+    "interruptHigherPriority": true
+  },
+  "states": {
+    "idle": {
+      "row": 0,
+      "label": "安静待机（嘴型小幅变化）"
+    },
+    "running-right": {
+      "row": 1,
+      "label": "向右移动（跳舞循环）"
+    },
+    "running-left": {
+      "row": 2,
+      "label": "向左移动（反向摇摆）"
+    },
+    "waving": {
+      "row": 3,
+      "label": "挥手打招呼（打招呼 GIF）",
+      "durationMs": 660
+    },
+    "jumping": {
+      "row": 4,
+      "label": "点赞庆祝（任务完成）",
+      "durationMs": 710
+    },
+    "failed": {
+      "row": 5,
+      "label": "摇头受挫",
+      "durationMs": 1360
+    },
+    "waiting": {
+      "row": 6,
+      "label": "喝茶等待确认（茶 GIF）"
+    },
+    "running": {
+      "row": 7,
+      "label": "打游戏式工作中（打游戏 GIF）"
+    },
+    "review": {
+      "row": 8,
+      "label": "托腮思考/检查中（主意 GIF）"
+    }
+  },
+  "look": {
+    "rows": [
+      9,
+      10
+    ],
+    "directions": 16,
+    "startAngle": 0,
+    "stepAngle": 22.5,
+    "neutral": "idle-row-0"
+  },
+  "events": [
+    {
+      "event": "app_start",
+      "label": "启动桌宠",
+      "state": "waving",
+      "priority": 80,
+      "cooldownMs": 30000
+    },
+    {
+      "event": "pointer_enter",
+      "label": "鼠标移入",
+      "state": "waving",
+      "priority": 60,
+      "cooldownMs": 12000
+    },
+    {
+      "event": "pet_click",
+      "label": "单击莎露朵",
+      "state": "waving",
+      "priority": 80,
+      "cooldownMs": 2500
+    },
+    {
+      "event": "double_click",
+      "label": "双击互动",
+      "state": "jumping",
+      "priority": 100,
+      "cooldownMs": 3000
+    },
+    {
+      "event": "task_start",
+      "label": "开始执行任务",
+      "state": "running",
+      "priority": 50
+    },
+    {
+      "event": "approval_needed",
+      "label": "等待用户批准",
+      "state": "waiting",
+      "priority": 90
+    },
+    {
+      "event": "task_complete",
+      "label": "任务完成",
+      "state": "jumping",
+      "priority": 100,
+      "cooldownMs": 3000
+    },
+    {
+      "event": "review_started",
+      "label": "开始检查结果",
+      "state": "review",
+      "priority": 70
+    },
+    {
+      "event": "task_failed",
+      "label": "任务失败/取消",
+      "state": "failed",
+      "priority": 100,
+      "cooldownMs": 5000
+    }
+  ],
+  "sequences": {
+    "start": [
+      "waving",
+      "idle"
+    ],
+    "done": [
+      "jumping",
+      "waving",
+      "idle"
+    ],
+    "error": [
+      "failed",
+      "idle"
+    ],
+    "approval": [
+      "waiting"
+    ],
+    "working": [
+      "running"
+    ],
+    "review": [
+      "review"
+    ]
+  },
+  "manualExpressions": {
+    "manifest": "expressions.json",
+    "spritesheet": "expressions.webp",
+    "ids": [
+      "cheer",
+      "shy",
+      "excited",
+      "cry"
+    ],
+    "scope": "统一资源包的 Web / Electron 可选表情；不新增 Codex 原生事件类型。"
+  }
+}

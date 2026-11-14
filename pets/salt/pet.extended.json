@@ -1,0 +1,171 @@
+{
+  "id": "salt",
+  "displayName": "莎露朵",
+  "description": "莎露朵统一桌宠：挥手招呼、点赞庆祝、摇头受挫、喝茶等待，附独立预览器可选表情。",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "spritesheet.webp",
+  "cell": {
+    "width": 192,
+    "height": 208
+  },
+  "columns": 8,
+  "frames": {
+    "idle": 6,
+    "running-right": 8,
+    "running-left": 8,
+    "waving": 4,
+    "jumping": 5,
+    "failed": 8,
+    "waiting": 6,
+    "running": 6,
+    "review": 6
+  },
+  "tracks": {
+    "idle": {
+      "durations": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "loop": true,
+      "fallback": "idle"
+    },
+    "running-right": {
+      "durations": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "fallback": "idle"
+    },
+    "running-left": {
+      "durations": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true,
+      "fallback": "idle"
+    },
+    "waving": {
+      "durations": [
+        180,
+        150,
+        150,
+        180
+      ],
+      "loop": false,
+      "fallback": "idle"
+    },
+    "jumping": {
+      "durations": [
+        140,
+        110,
+        150,
+        130,
+        180
+      ],
+      "loop": false,
+      "fallback": "idle"
+    },
+    "failed": {
+      "durations": [
+        170,
+        170,
+        170,
+        170,
+        170,
+        170,
+        170,
+        170
+      ],
+      "loop": false,
+      "fallback": "idle"
+    },
+    "waiting": {
+      "durations": [
+        220,
+        220,
+        220,
+        220,
+        220,
+        220
+      ],
+      "loop": true,
+      "fallback": "idle"
+    },
+    "running": {
+      "durations": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "loop": true,
+      "fallback": "idle"
+    },
+    "review": {
+      "durations": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "loop": true,
+      "fallback": "idle"
+    }
+  },
+  "sequences": {
+    "start": [
+      "waving",
+      "idle"
+    ],
+    "done": [
+      "jumping",
+      "waving",
+      "idle"
+    ],
+    "error": [
+      "failed",
+      "idle"
+    ]
+  },
+  "remarks": {
+    "pet": [
+      "……のです。",
+      "今天也在找蓝色面粉。",
+      "要一起吃肉桂卷吗？"
+    ],
+    "petCooldown": [
+      "面团还在发酵……"
+    ],
+    "feed": [
+      "是意式生牛肉片！",
+      "三文鱼三明治……可以吗？"
+    ],
+    "feedCooldown": [
+      "已经吃得饱饱的了。"
+    ],
+    "noTreats": [
+      "没有点心的话，我就继续揉面了。"
+    ]
+  }
+}

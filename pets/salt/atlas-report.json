@@ -1,0 +1,193 @@
+{
+  "cell": [
+    192,
+    208
+  ],
+  "grid": [
+    8,
+    11
+  ],
+  "rows": [
+    {
+      "row": 0,
+      "state": "idle",
+      "frames": 6,
+      "expected": 6,
+      "source": "frames-dir",
+      "durations": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "loop": true
+    },
+    {
+      "row": 1,
+      "state": "running-right",
+      "frames": 8,
+      "expected": 8,
+      "source": "frames-dir",
+      "durations": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true
+    },
+    {
+      "row": 2,
+      "state": "running-left",
+      "frames": 8,
+      "expected": 8,
+      "source": "frames-dir",
+      "durations": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "loop": true
+    },
+    {
+      "row": 3,
+      "state": "waving",
+      "frames": 4,
+      "expected": 4,
+      "source": "frames-dir",
+      "durations": [
+        180,
+        150,
+        150,
+        180
+      ],
+      "loop": false
+    },
+    {
+      "row": 4,
+      "state": "jumping",
+      "frames": 5,
+      "expected": 5,
+      "source": "frames-dir",
+      "durations": [
+        140,
+        110,
+        150,
+        130,
+        180
+      ],
+      "loop": false
+    },
+    {
+      "row": 5,
+      "state": "failed",
+      "frames": 8,
+      "expected": 8,
+      "source": "frames-dir",
+      "durations": [
+        170,
+        170,
+        170,
+        170,
+        170,
+        170,
+        170,
+        170
+      ],
+      "loop": false
+    },
+    {
+      "row": 6,
+      "state": "waiting",
+      "frames": 6,
+      "expected": 6,
+      "source": "frames-dir",
+      "durations": [
+        220,
+        220,
+        220,
+        220,
+        220,
+        220
+      ],
+      "loop": true
+    },
+    {
+      "row": 7,
+      "state": "running",
+      "frames": 6,
+      "expected": 6,
+      "source": "frames-dir",
+      "durations": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "loop": true
+    },
+    {
+      "row": 8,
+      "state": "review",
+      "frames": 6,
+      "expected": 6,
+      "source": "frames-dir",
+      "durations": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "loop": true
+    }
+  ],
+  "looks": {
+    "count": 16,
+    "row9": [
+      "0",
+      "22.5",
+      "45",
+      "67.5",
+      "90",
+      "112.5",
+      "135",
+      "157.5"
+    ],
+    "row10": [
+      "180",
+      "202.5",
+      "225",
+      "247.5",
+      "270",
+      "292.5",
+      "315",
+      "337.5"
+    ],
+    "source": "frames-dir",
+    "provided": 16
+  },
+  "file": "pets\\salt\\spritesheet.webp",
+  "bytes": 1055010,
+  "sha256": "bb61914c03ce71f87317187fdde413bb7df4e07c4b7c6653c8b04ed289d44472",
+  "size": [
+    1536,
+    2288
+  ],
+  "format": "webp",
+  "mode": "RGBA"
+}

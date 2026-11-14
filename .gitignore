@@ -1,0 +1,26 @@
+﻿build/
+ref/
+renderer/node_modules/
+__pycache__/
+*.pyc
+renderer/dist/
+
+.probe
+魔法盐巴合集*/
+
+# Local environments, credentials and tool caches
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.ruff_cache/
+*.log
+
+# Operating-system and editor state
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+

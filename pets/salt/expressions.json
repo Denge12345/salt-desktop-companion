@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "spritesheetPath": "expressions.webp",
+  "columns": 8,
+  "cell": {
+    "width": 192,
+    "height": 208
+  },
+  "items": [
+    {
+      "id": "cheer",
+      "label": "比耶",
+      "state": "jumping",
+      "row": 0,
+      "frames": 5,
+      "source": "耶.gif",
+      "indices": [
+        0,
+        10,
+        20,
+        30,
+        40
+      ]
+    },
+    {
+      "id": "shy",
+      "label": "害羞",
+      "state": "waving",
+      "row": 1,
+      "frames": 4,
+      "source": "害羞 2.gif",
+      "indices": [
+        0,
+        12,
+        28,
+        48
+      ]
+    },
+    {
+      "id": "excited",
+      "label": "期待",
+      "state": "waiting",
+      "row": 2,
+      "frames": 6,
+      "source": "期待 2.gif",
+      "indices": [
+        0,
+        11,
+        22,
+        33,
+        44,
+        55
+      ]
+    },
+    {
+      "id": "cry",
+      "label": "哭泣",
+      "state": "failed",
+      "row": 3,
+      "frames": 8,
+      "source": "哭 2.gif",
+      "indices": [
+        0,
+        14,
+        27,
+        41,
+        55,
+        69,
+        82,
+        96
+      ]
+    }
+  ],
+  "sha256": "eaac90c6b1b3793850a10343df3b07c976d680f445b95e20561b68028f74804e"
+}

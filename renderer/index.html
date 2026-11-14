@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'" />
+  <title>莎露朵 · Codex v2 桌宠渲染器</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app" id="app">
+    <section class="stage-wrap">
+      <div class="stage" id="stage">
+        <canvas id="pet" width="384" height="416" aria-label="莎露朵桌宠"></canvas>
+        <div class="hint" id="hint">拖动 / 点击 / 双击 / 移动鼠标看视线</div>
+      </div>
+      <div class="meta">
+        <span id="pet-name">莎露朵</span>
+        <span class="dot">·</span>
+        <span id="pet-version">v2</span>
+        <span class="dot">·</span>
+        <span id="atlas-size">1536 × 2288</span>
+      </div>
+    </section>
+
+    <aside class="panel" id="panel">
+      <header class="panel-head">
+        <div>
+          <h1>Salt <span>莎露朵</span></h1>
+          <p class="sub">Codex v2 · 8 × 11 · 192 × 208</p>
+        </div>
+        <button class="icon" id="theme" title="切换棋盘格背景">▦</button>
+      </header>
+
+      <section class="block">
+        <h2>动作状态</h2>
+        <div class="states" id="states"></div>
+      </section>
+
+      <section class="block" id="expressions-block" hidden>
+        <h2>互动表情 <small>独立预览器扩展</small></h2>
+        <div class="states" id="expressions"></div>
+      </section>
+
+      <section class="block">
+        <h2>16 向视线 <small>000 = 正上</small></h2>
+        <div class="lookpad" id="lookpad"></div>
+        <div class="row">
+          <button id="look-off" class="ghost">正面 / 关闭视线</button>
+          <span class="look-readout" id="look-readout">—</span>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>播放</h2>
+        <div class="row">
+          <button id="demo" class="ghost">自动演示</button>
+          <button id="ping" class="ghost">挥手</button>
+          <button id="jump" class="ghost">点赞庆祝</button>
+        </div>
+        <div class="row">
+          <label class="scale">缩放
+            <input id="scale" type="range" min="1" max="3" step="0.25" value="2" />
+            <output id="scale-out">2×</output>
+          </label>
+        </div>
+      </section>
+
+      <section class="block status">
+        <h2>状态</h2>
+        <pre id="status">loading…</pre>
+      </section>
+
+      <footer class="foot">
+        <span>点击画布任意处可交互</span>
+        <span id="fps">– fps</span>
+      </footer>
+    </aside>
+  </main>
+
+  <div class="toast" id="toast" hidden></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

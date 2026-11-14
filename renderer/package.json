@@ -1,0 +1,16 @@
+{
+  "name": "salt-codex-pet",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "description": "Salt (莎露朵) Codex v2 desktop pet — frameless transparent Electron shell",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node test-core.mjs && node test-app.mjs && node electron/test-main.cjs"
+  },
+  "devDependencies": {
+    "electron": "45.3.1"
+  }
+}
