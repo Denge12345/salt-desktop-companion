@@ -126,7 +126,7 @@ Get-Item -LiteralPath (Join-Path $petDir "pet.json"), (Join-Path $petDir "sprite
 3. 如果已选中却没有悬浮窗口，在命令菜单中找 **Show pet / 显示宠物**；支持该命令的版本也可以输入 `/pet`。入口名称可能因客户端版本不同而变化。
 4. 桌面上出现角色即完成安装。动作播放由客户端控制，项目 Web 预览中的调试面板不会一起出现。
 
-OpenAI 当前 [Pets 文档](https://learn.chatgpt.com/docs/pets) 介绍了 Settings → Pets、Show pet 与 `/pet` 的桌面入口；[安装链接文档](https://learn.chatgpt.com/docs/reference/commands#pets) 支持指定 v2。上述本地双文件复制方式参考 [小蕾米仓库](https://github.com/HanaAyane/remielle-codex-pet)，仍需以你使用的客户端是否支持本地自定义桌宠为准。不要使用 ChatGPT 网页的 PNG 上传要求来缩放本项目的 v2 图集。
+OpenAI 当前 [Pets 文档](https://learn.chatgpt.com/docs/pets) 介绍了 Settings → Pets、Show pet 与 `/pet` 的桌面入口；[安装链接文档](https://learn.chatgpt.com/docs/reference/commands#pets) 支持指定 v2。本地双文件安装仍需以你使用的客户端是否支持本地自定义桌宠为准。不要使用 ChatGPT 网页的 PNG 上传要求来缩放本项目的 v2 图集。
 
 #### 不想手动复制？交给 Agent 安装
 
@@ -167,7 +167,7 @@ ls -lh "$pet_dir/pet.json" "$pet_dir/spritesheet.webp"
 | 没有 Pets 设置入口 | 核对是否使用支持该功能的桌面客户端并检查更新；IDE 扩展和网页不是同一个安装入口 |
 | 已选中，桌面没有角色 | 尝试 Show pet / 显示宠物；检查是否选了 Mini、是否隐藏了宠物 |
 | 角色不动 | 检查系统“减少动态效果”设置；该设置可能令宠物显示静态帧，见官方 Pets 文档 |
-| Windows 使用 WSL 后端 | 先核对 Windows 与 WSL 两侧目录；参考仓库记录过兼容问题，不能保证切后端一定解决，不要直接修改任务执行环境 |
+| Windows 使用 WSL 后端 | 先核对 Windows 与 WSL 两侧目录；后端兼容性需结合客户端版本排查，不要直接修改任务执行环境 |
 | 想让独立 Electron 桌宠跟随任务 | 当前独立壳没有任务事件连接；原生安装的播放行为由客户端决定 |
 
 可选的只读检查（PowerShell，无需安装 Python）：
@@ -277,7 +277,3 @@ build/              # 本地中间产物、缓存、旧文件备份，不提交
 ## 版权与来源
 
 项目代码与测试按 [MIT License](LICENSE) 提供；角色「莎露朵 / ソルト / Salt」及《maimai》相关权利归 SEGA 等权利人所有。第三方素材与依赖仍适用各自的声明与许可。来源记录、素材范围和授权状态见 [NOTICE.md](NOTICE.md) 与 [SOURCE.md](pets/salt/SOURCE.md)。
-
-## 致谢
-
-感谢 [HanaAyane/remielle-codex-pet](https://github.com/HanaAyane/remielle-codex-pet) 提供的资源包组织与动作布局参考。
