@@ -1,6 +1,6 @@
 # 莎露朵 · Codex v2 桌宠
 
-Salt / ソルト，一套半身 PNGTuber 风格的 Codex v2 桌宠资源包，附 Web / Electron 预览器与素材制作工具。参考 [HanaAyane/remielle-codex-pet](https://github.com/HanaAyane/remielle-codex-pet) 的资源结构与动作布局。
+让莎露朵（Salt / ソルト）陪伴你的桌面工作：挥手招呼、点赞庆祝、喝茶等待，还有害羞、期待等互动表情。提供可直接安装的 Codex v2 半身桌宠资源包，以及 Web / Electron 预览器与素材制作工具。
 
 ![莎露朵动态预览：挥手、点赞、期待](docs/assets/demo.gif)
 
@@ -277,3 +277,7 @@ build/              # 本地中间产物、缓存、旧文件备份，不提交
 ## 版权与来源
 
 项目代码与测试按 [MIT License](LICENSE) 提供；角色「莎露朵 / ソルト / Salt」及《maimai》相关权利归 SEGA 等权利人所有。第三方素材与依赖仍适用各自的声明与许可。来源记录、素材范围和授权状态见 [NOTICE.md](NOTICE.md) 与 [SOURCE.md](pets/salt/SOURCE.md)。
+
+## 致谢
+
+感谢 [HanaAyane/remielle-codex-pet](https://github.com/HanaAyane/remielle-codex-pet) 提供的资源包组织与动作布局参考。
